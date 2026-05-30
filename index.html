@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTravel Agency - Voyagez à travers les époques</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="epoch-styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">⏰ TimeTravel Agency</div>
+            <ul class="nav-menu">
+                <li><a href="#hero" data-i18n="home">Accueil</a></li>
+                <li><a href="#about" data-i18n="about">À propos</a></li>
+                <li><a href="#destinations" data-i18n="destinations">Destinations</a></li>
+                <li><a href="javascript:void(0)" onclick="document.getElementById('tt-chatbot-fab').click()"
+                        data-i18n="ai_assistance">Assistance IA</a></li>
+                <li class="nav-controls">
+                    <button class="icon-btn" onclick="toggleDarkMode()" title="Mode sombre">🌙</button>
+                    <button class="icon-btn" onclick="openFavorites()" title="Favoris">❤️</button>
+                    <select class="language-select" onchange="setLanguage(this.value)" title="Langue">
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="es">🇪🇸 ES</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="hero_title">Voyagez à travers les époques</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Découvrez l'histoire, vivez l'aventure, écrivez votre
+                légende</p>
+            <div class="hero-cta">
+                <button class="btn btn-primary"
+                    onclick="document.getElementById('destinations').scrollIntoView({behavior: 'smooth'})">
+                    <span data-i18n="explore_destinations">🗺️ Explorer les destinations</span>
+                </button>
+                <button class="btn btn-secondary" onclick="toggleChatbot()">
+                    <span data-i18n="discuss_ai">🤖 Discuter avec un agent IA</span>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span data-i18n="scroll_more">↓ Découvrez plus</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>TimeTravel Agency</h2>
+                <p class="about-intro" data-i18n="about_intro">Plongez dans une expérience révolutionnaire où le temps
+                    n'est plus une limite, mais une destination.</p>
+
+                <div class="values">
+                    <div class="value-card">
+                        <span class="value-icon">💡</span>
+                        <h3 data-i18n="innovation">Innovation</h3>
+                        <p data-i18n="innovation_desc">Technologie de voyage temporel de pointe</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="value-icon">🎭</span>
+                        <h3 data-i18n="immersion">Immersion</h3>
+                        <p data-i18n="immersion_desc">Expériences authentiques et immersives</p>
+                    </div>
+                    <div class="value-card">
+                        <span class="value-icon">✨</span>
+                        <h3 data-i18n="unique_exp">Expérience Unique</h3>
+                        <p data-i18n="unique_exp_desc">Créez vos propres souvenirs intemporels</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://i.imgur.com/iX3WkA1.jpg" alt="Futur" class="epoch-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Preview Section -->
+    <section id="destinations" class="destinations-preview">
+        <div class="container">
+            <h2 class="section-title" data-i18n="explore_epochs">Explorez les Époques</h2>
+            <p class="section-subtitle" data-i18n="three_destinations">Trois destinations extraordinaires vous attendent
+            </p>
+
+            <div class="epochs-grid">
+                <!-- Antiquity -->
+                <div class="epoch-card antiquity" onclick="window.location.href='epoch-antiquity.html'">
+                    <div class="epoch-image-container">
+                        <img src="https://i.imgur.com/pBKNSpT.jpg" alt="Antiquité" class="epoch-image">
+                        <div class="epoch-overlay">
+                            <h3 data-i18n="epoch_antiquity_title">L'Antiquité</h3>
+                            <p data-i18n="epoch_antiquity_period">2500 ans av. J.C. - 476 ap. J.C.</p>
+                        </div>
+                    </div>
+                    <div class="epoch-content">
+                        <h3 data-i18n="epoch_antiquity_title">🏛️ L'Antiquité</h3>
+                        <p data-i18n="antiquity_preview_desc">Marchez aux côtés des Pharaons, assistez à la construction
+                            des merveilles du monde antique. Explorez les empires romains et grecs dans toute leur
+                            splendeur.</p>
+                        <button class="btn btn-outline" data-i18n="discover_more">Découvrir →</button>
+                    </div>
+                </div>
+
+                <!-- Middle Ages -->
+                <div class="epoch-card middle-ages" onclick="window.location.href='epoch-middle-ages.html'">
+                    <div class="epoch-image-container">
+                        <img src="https://i.imgur.com/Q2FiCmZ.jpg" alt="Moyen-Âge" class="epoch-image">
+                        <div class="epoch-overlay">
+                            <h3 data-i18n="epoch_middle_ages_title">Moyen-Âge</h3>
+                            <p data-i18n="epoch_middle_ages_period">476 ap. J.C. - 1453 ap. J.C.</p>
+                        </div>
+                    </div>
+                    <div class="epoch-content">
+                        <h3 data-i18n="epoch_middle_ages_title">🏰 Moyen-Âge</h3>
+                        <p data-i18n="middle_ages_preview_desc">Vivez la chevalerie, explorez les châteaux féodaux et
+                            participez aux grands événements médiévaux. Rencontrez rois, reines et guerriers
+                            légendaires.</p>
+                        <button class="btn btn-outline" data-i18n="discover_more">Découvrir →</button>
+                    </div>
+                </div>
+
+                <!-- Future -->
+                <div class="epoch-card future" onclick="window.location.href='epoch-future.html'">
+                    <div class="epoch-image-container">
+                        <img src="https://i.imgur.com/iX3WkA1.jpg" alt="Futur" class="epoch-image">
+                        <div class="epoch-overlay">
+                            <h3 data-i18n="epoch_future_title">Le Futur</h3>
+                            <p data-i18n="epoch_future_period">2100 - 2500 ap. J.C.</p>
+                        </div>
+                    </div>
+                    <div class="epoch-content">
+                        <h3 data-i18n="epoch_future_title">🚀 Le Futur</h3>
+                        <p data-i18n="future_preview_desc">Découvrez les villes volantes, l'intelligence artificielle
+                            avancée et les technologies qui changeront l'humanité. Vivez demain, aujourd'hui.</p>
+                        <button class="btn btn-outline" data-i18n="discover_more">Découvrir →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 data-i18n="ready_for_adventure">Prêt pour l'aventure ?</h2>
+            <p data-i18n="choose_epoch">Choisissez votre époque et réservez dès maintenant</p>
+            <button class="btn btn-primary btn-large" onclick="toggleChatbot()" data-i18n="ask_ai_advice">
+                Demander conseil à notre IA
+            </button>
+        </div>
+    </section>
+
+    <!-- Floating Chatbot Widget injected by chatbot.js -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 TimeTravel Agency. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="#privacy">Confidentialité</a>
+                <a href="#terms">Conditions</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="epoch-script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+
+</html>

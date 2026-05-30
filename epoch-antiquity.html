@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Antiquité - TimeTravel Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="epoch-styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">⏰ TimeTravel Agency</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#destinations">Destinations</a></li>
+                <li><a href="#details">Détails</a></li>
+                <li><a href="#booking">Réserver</a></li>
+                <li class="nav-controls">
+                    <button class="icon-btn" onclick="toggleDarkMode()" title="Mode sombre">🌙</button>
+                    <button class="icon-btn" onclick="toggleFavorite()" title="Favoris">❤️</button>
+                    <select class="language-select" onchange="setLanguage(this.value)" title="Langue">
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="es">🇪🇸 ES</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="epoch-hero antiquity-hero">
+        <div class="hero-overlay"></div>
+        <div class="epoch-hero-content">
+            <h1 data-i18n="epoch_antiquity_title">🏛️ L'Antiquité</h1>
+            <p class="epoch-period" data-i18n="epoch_antiquity_period">2500 ans av. J.C. - 476 ap. J.C.</p>
+            <p class="epoch-tagline" data-i18n="epoch_antiquity_tagline">Marchez aux côtés des Pharaons et des empereurs
+            </p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html" data-i18n="home">Accueil</a>
+        <span>→</span>
+        <span data-i18n="epoch_antiquity">Antiquité</span>
+    </div>
+
+    <!-- Details Section -->
+    <section id="details" class="epoch-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Main Description -->
+                <div class="details-main">
+                    <h2 data-i18n="details_title">Découvrez l'Antiquité</h2>
+                    <p data-i18n="antiquity_desc_1">
+                        Plongez dans une époque où les civilisations antiques façonnaient le monde.
+                        De la majestueuse Égypte des Pharaons aux puissants empires romains et grecs,
+                        vivez des expériences qui ont défini la course de l'humanité.
+                    </p>
+                    <p data-i18n="antiquity_desc_2">
+                        Explorez les pyramides intemporelles, assistez à des débats philosophiques
+                        à Athènes, marchez dans les forums de Rome antique et découvrez les secrets
+                        des temples sacrés.
+                    </p>
+
+                    <!-- Highlights -->
+                    <div class="highlights">
+                        <div class="highlight-item">
+                            <h3>🏜️ <span data-i18n="egypt">Égypte Ancienne</span></h3>
+                            <p data-i18n="egypt_desc">Construisez les pyramides, rencontrez les Pharaons, naviguez sur
+                                le Nil</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>🏺 <span data-i18n="greece">Grèce Antique</span></h3>
+                            <p data-i18n="greece_desc">Participez aux Jeux Olympiques, étudiez la philosophie à Athènes
+                            </p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>🦅 <span data-i18n="rome">Empire Romain</span></h3>
+                            <p data-i18n="rome_desc">Assistez aux jeux du Colosseum, marchez dans le Forum romain</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="details-gallery">
+                    <img src="https://i.imgur.com/pBKNSpT.jpg" alt="Antiquité" class="epoch-image">
+                    <div class="gallery-thumbnails">
+                        <img src="https://i.imgur.com/pBKNSpT.jpg" alt="Thumb 1" class="thumbnail">
+                        <img src="https://i.imgur.com/iX3WkA1.jpg" alt="Thumb 2" class="thumbnail">
+                        <img src="https://i.imgur.com/Q2FiCmZ.jpg" alt="Thumb 3" class="thumbnail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Points of Interest -->
+    <section class="epoch-pois">
+        <div class="container">
+            <h2 data-i18n="pois_title">Points d'Intérêt</h2>
+            <div class="pois-grid">
+                <div class="poi-card">
+                    <div class="poi-icon">📍</div>
+                    <h3 data-i18n="poi_giza">Plateau de Giza</h3>
+                    <p data-i18n="poi_giza_desc">Les trois grandes pyramides et le Sphinx légendaire</p>
+                    <span class="difficulty" data-i18n="difficulty_medium">Moyen</span>
+                </div>
+                <div class="poi-card">
+                    <div class="poi-icon">🏛️</div>
+                    <h3 data-i18n="poi_parthenon">Le Parthénon</h3>
+                    <p data-i18n="poi_parthenon_desc">Temple d'Athéna à Athènes, merveille architecturale</p>
+                    <span class="difficulty" data-i18n="difficulty_easy">Facile</span>
+                </div>
+                <div class="poi-card">
+                    <div class="poi-icon">⚔️</div>
+                    <h3 data-i18n="poi_colosseum">Colosseum</h3>
+                    <p data-i18n="poi_colosseum_desc">Amphithéâtre de Rome avec combats de gladiateurs</p>
+                    <span class="difficulty" data-i18n="difficulty_hard">Intense</span>
+                </div>
+                <div class="poi-card">
+                    <div class="poi-icon">🏛️</div>
+                    <h3 data-i18n="poi_forum">Forum Romain</h3>
+                    <p data-i18n="poi_forum_desc">Cœur politique et commercial de Rome antique</p>
+                    <span class="difficulty" data-i18n="difficulty_easy">Facile</span>
+                </div>
+                <div class="poi-card">
+                    <div class="poi-icon">🎭</div>
+                    <h3 data-i18n="poi_olympics">Jeux Olympiques</h3>
+                    <p data-i18n="poi_olympics_desc">Participez aux compétitions antiques à Olympie</p>
+                    <span class="difficulty" data-i18n="difficulty_hard">Intense</span>
+                </div>
+                <div class="poi-card">
+                    <div class="poi-icon">🌊</div>
+                    <h3 data-i18n="poi_nile">Croisière sur le Nil</h3>
+                    <p data-i18n="poi_nile_desc">Naviguez comme les anciens Égyptiens</p>
+                    <span class="difficulty" data-i18n="difficulty_easy">Facile</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Info -->
+    <section class="epoch-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3 data-i18n="info_duration">Durée Recommandée</h3>
+                    <div class="info-options">
+                        <div class="option">
+                            <span class="option-label" data-i18n="express">Express</span>
+                            <span class="option-value">3 jours</span>
+                            <span class="option-price">À partir de 3,500€</span>
+                        </div>
+                        <div class="option">
+                            <span class="option-label" data-i18n="standard">Standard</span>
+                            <span class="option-value">7 jours</span>
+                            <span class="option-price">À partir de 5,000€</span>
+                        </div>
+                        <div class="option">
+                            <span class="option-label" data-i18n="premium">Premium</span>
+                            <span class="option-value">14 jours</span>
+                            <span class="option-price">À partir de 8,500€</span>
+                        </div>
+                        <div class="option">
+                            <span class="option-label" data-i18n="luxury">Luxe</span>
+                            <span class="option-value">21 jours</span>
+                            <span class="option-price">À partir de 12,000€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3 data-i18n="experience_types">Types d'Expérience</h3>
+                    <div class="experience-types">
+                        <label class="experience-option">
+                            <input type="radio" name="experience" value="adventure">
+                            <span>🎯 <span data-i18n="adventure">Aventure</span></span>
+                            <p data-i18n="adventure_desc">Défis intenses et découvertes thrilling</p>
+                        </label>
+                        <label class="experience-option">
+                            <input type="radio" name="experience" value="discovery">
+                            <span>🔍 <span data-i18n="discovery">Découverte</span></span>
+                            <p data-i18n="discovery_desc">Apprentissage approfondi et histoire</p>
+                        </label>
+                        <label class="experience-option">
+                            <input type="radio" name="experience" value="luxury">
+                            <span>👑 <span data-i18n="luxury_exp">Luxe</span></span>
+                            <p data-i18n="luxury_desc">Confort premium et services exclusifs</p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3 data-i18n="warnings_title">⚠️ Recommandations</h3>
+                    <ul class="warnings">
+                        <li data-i18n="warning_1">Climat chaud et sec, prévoir hydratation</li>
+                        <li data-i18n="warning_2">Éviter les périodes de conflit politique majeur</li>
+                        <li data-i18n="warning_3">Période optimale: 50 av.J.C - 100 ap.J.C</li>
+                        <li data-i18n="warning_4">Protection solaire obligatoire</li>
+                        <li data-i18n="warning_5">Guide historique fourni pour chaque excursion</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="epoch-booking">
+        <div class="container">
+            <h2 data-i18n="booking_title">Réservez Votre Voyage</h2>
+            <form class="booking-form" onsubmit="submitBooking(event)">
+                <div class="form-group">
+                    <label data-i18n="booking_name">Nom complet</label>
+                    <input type="text" required placeholder="Jean Dupont">
+                </div>
+                <div class="form-group">
+                    <label data-i18n="booking_email">Email</label>
+                    <input type="email" required placeholder="jean@example.com">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-i18n="booking_start">Date de départ</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="booking_travelers">Nombre de voyageurs</label>
+                        <input type="number" min="1" max="20" value="1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="booking_duration">Durée du séjour</label>
+                    <select required>
+                        <option value="">Sélectionnez...</option>
+                        <option value="3">3 jours - 3,500€</option>
+                        <option value="7">7 jours - 5,000€</option>
+                        <option value="14">14 jours - 8,500€</option>
+                        <option value="21">21 jours - 12,000€</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="booking_experience">Type d'expérience</label>
+                    <select required>
+                        <option value="">Sélectionnez...</option>
+                        <option value="adventure">🎯 Aventure</option>
+                        <option value="discovery">🔍 Découverte</option>
+                        <option value="luxury">👑 Luxe</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="booking_interests">Vos intérêts (sélectionnez 1+)</label>
+                    <div class="checkboxes">
+                        <label><input type="checkbox" name="interests" value="egypt"> 🏜️ Égypte</label>
+                        <label><input type="checkbox" name="interests" value="greece"> 🏺 Grèce</label>
+                        <label><input type="checkbox" name="interests" value="rome"> 🦅 Rome</label>
+                        <label><input type="checkbox" name="interests" value="philosophy"> 📚 Philosophie</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large" data-i18n="booking_submit">
+                    Réserver Maintenant
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="epoch-cta">
+        <h2 data-i18n="cta_help">Besoin d'aide pour choisir?</h2>
+        <button class="btn btn-secondary btn-large" onclick="toggleChatbot()">
+            🤖 <span data-i18n="chat_ai">Discuter avec notre IA</span>
+        </button>
+    </section>
+
+    <!-- Floating Chatbot Widget injected by chatbot.js -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 TimeTravel Agency. <span data-i18n="rights">Tous droits réservés</span>.</p>
+            <div class="footer-links">
+                <a href="#privacy" data-i18n="privacy">Confidentialité</a>
+                <a href="#terms" data-i18n="terms">Conditions</a>
+                <a href="#contact" data-i18n="contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="epoch-script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+
+</html>

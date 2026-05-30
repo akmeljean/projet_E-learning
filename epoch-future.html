@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Futur - TimeTravel Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="epoch-styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">⏰ TimeTravel Agency</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#destinations">Destinations</a></li>
+                <li><a href="#details">Détails</a></li>
+                <li><a href="#booking">Réserver</a></li>
+                <li class="nav-controls">
+                    <button class="icon-btn" onclick="toggleDarkMode()" title="Mode sombre">🌙</button>
+                    <button class="icon-btn" onclick="toggleFavorite()" title="Favoris">❤️</button>
+                    <select class="language-select" onchange="setLanguage(this.value)" title="Langue">
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="es">🇪🇸 ES</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="epoch-hero future-hero">
+        <div class="hero-overlay"></div>
+        <div class="epoch-hero-content">
+            <h1 data-i18n="epoch_future_title">🚀 Le Futur</h1>
+            <p class="epoch-period" data-i18n="epoch_future_period">2100 - 2500 ap. J.C.</p>
+            <p class="epoch-tagline" data-i18n="epoch_future_tagline">Vivez les technologies de demain</p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html" data-i18n="home">Accueil</a>
+        <span>→</span>
+        <span data-i18n="epoch_future">Futur</span>
+    </div>
+
+    <!-- Details Section -->
+    <section id="details" class="epoch-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Main Description -->
+                <div class="details-main">
+                    <h2 data-i18n="details_title">Découvrez le Futur</h2>
+                    <p data-i18n="future_desc_1">
+                        Plongez dans une civilisation futuriste où les technologies avancées transforment
+                        l'humanité. Des villes flottantes aux intelligences artificielles conscientes,
+                        découvrez un monde où l'impossible devient réalité.
+                    </p>
+                    <p data-i18n="future_desc_2">
+                        Explorez les mégalopoles du ciel, interagissez avec l'IA avancée,
+                        participez à des expériences immersives et découvrez les innovations
+                        qui ont façonné l'avenir de l'humanité.
+                    </p>
+
+                    <!-- Highlights -->
+                    <div class="highlights">
+                        <div class="highlight-item">
+                            <h3>🌆 <span data-i18n="flying_cities">Villes Flottantes</span></h3>
+                            <p data-i18n="flying_cities_desc">Mégalopoles suspendues dans le ciel avec technologie
+                                gravitationnelle</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>🤖 <span data-i18n="ai_companions">Compagnons IA</span></h3>
+                            <p data-i18n="ai_companions_desc">Interagissez avec des intelligences artificielles
+                                humanoïdes</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h3>🧬 <span data-i18n="bio_tech">Bio-technologies</span></h3>
+                            <p data-i18n="bio_tech_desc">Expériences biologiques et modifications génétiques</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Gallery -->
+                <div class="details-gallery">
+                    <img src="https://i.imgur.com/iX3WkA1.jpg" alt="Futur" class="gallery-main">
+                    <div class="gallery-thumbnails">
+                        <img src="https://i.imgur.com/iX3WkA1.jpg" alt="Thumb 1" class="thumbnail">
+                        <img src="https://i.imgur.com/pBKNSpT.jpg" alt="Thumb 2" class="thumbnail">
+                        <img src="https://i.imgur.com/Q2FiCmZ.jpg" alt="Thumb 3" class="thumbnail">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Points of Interest -->
+    <section class="epoch-pois">
+        <div class="container">
+            <h2 data-i18n="pois_title">Points d'Intérêt</h2>
+            <div class="pois-grid">
+                <div class="poi-card">
+                    <div class="poi-icon">🌆</div>
+                    <h3 data-i18n="poi_neo_tokyo">Néo-Tokyo</h3>
+                    <p data-i18n="poi_neo_tokyo_desc">Mégalopole futuriste avec architecture holographique</p>
+                    <span class="difficulty" data-i18n="difficulty_medium">Moyen</span>
+                </div>
+                <div class="poi-card">
+                    <div class="poi-icon">🚀</div>
+                    <h3 data-i18n="poi_space_elevator">Ascenseur Spatial</h3>
+                    <p data-i18n="poi_space_elevator_desc">Voyage vers l'espace en quelques heures</p>
+                    <span class="difficulty" data-i18n="difficulty_hard">Intense</span>
+                </div>
+                <div class="poi-card">
+                    <div class="poi-icon">🧠</div>
+                    <h3 data-i18n="poi_ai_nexus">Nexus IA</h3>
+                    <p data-i18n="poi_ai_nexus_desc">Centre de conscience collective des intelligences artificielles</p>
+                    <span class="difficulty" data-i18n="difficulty_hard">Intense</span>
+                </div>
+                <div class="poi-card">
+                    <div class="poi-icon">🌊</div>
+                    <h3 data-i18n="poi_underwater_cities">Villes Sous-Marines</h3>
+                    <p data-i18n="poi_underwater_cities_desc">Civilisations souterraines avancées</p>
+                    <span class="difficulty" data-i18n="difficulty_medium">Moyen</span>
+                </div>
+                <div class="poi-card">
+                    <div class="poi-icon">🎮</div>
+                    <h3 data-i18n="poi_vr_dimensions">Dimensions RV</h3>
+                    <p data-i18n="poi_vr_dimensions_desc">Réalités virtuelles immersives et mondes alternatifs</p>
+                    <span class="difficulty" data-i18n="difficulty_easy">Facile</span>
+                </div>
+                <div class="poi-card">
+                    <div class="poi-icon">🔬</div>
+                    <h3 data-i18n="poi_biolab">Laboratoire Génétique</h3>
+                    <p data-i18n="poi_biolab_desc">Innovations en bio-technologies et génie génétique</p>
+                    <span class="difficulty" data-i18n="difficulty_medium">Moyen</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Info -->
+    <section class="epoch-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3 data-i18n="info_duration">Durée Recommandée</h3>
+                    <div class="info-options">
+                        <div class="option">
+                            <span class="option-label" data-i18n="express">Express</span>
+                            <span class="option-value">3 jours</span>
+                            <span class="option-price">À partir de 4,500€</span>
+                        </div>
+                        <div class="option">
+                            <span class="option-label" data-i18n="standard">Standard</span>
+                            <span class="option-value">7 jours</span>
+                            <span class="option-price">À partir de 6,500€</span>
+                        </div>
+                        <div class="option">
+                            <span class="option-label" data-i18n="premium">Premium</span>
+                            <span class="option-value">14 jours</span>
+                            <span class="option-price">À partir de 10,000€</span>
+                        </div>
+                        <div class="option">
+                            <span class="option-label" data-i18n="luxury">Luxe</span>
+                            <span class="option-value">21 jours</span>
+                            <span class="option-price">À partir de 15,000€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3 data-i18n="experience_types">Types d'Expérience</h3>
+                    <div class="experience-types">
+                        <label class="experience-option">
+                            <input type="radio" name="experience" value="adventure">
+                            <span>🎯 <span data-i18n="adventure">Aventure</span></span>
+                            <p data-i18n="adventure_desc">Défis intenses et découvertes thrilling</p>
+                        </label>
+                        <label class="experience-option">
+                            <input type="radio" name="experience" value="discovery">
+                            <span>🔍 <span data-i18n="discovery">Découverte</span></span>
+                            <p data-i18n="discovery_desc">Apprentissage approfondi et histoire</p>
+                        </label>
+                        <label class="experience-option">
+                            <input type="radio" name="experience" value="luxury">
+                            <span>👑 <span data-i18n="luxury_exp">Luxe</span></span>
+                            <p data-i18n="luxury_desc">Confort premium et services exclusifs</p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3 data-i18n="warnings_title">⚠️ Recommandations</h3>
+                    <ul class="warnings">
+                        <li data-i18n="future_warning_1">Adaptation neurologique requise</li>
+                        <li data-i18n="future_warning_2">Vaccins futuristes obligatoires</li>
+                        <li data-i18n="future_warning_3">Protection contre les ondes magnétiques</li>
+                        <li data-i18n="future_warning_4">Entraînement IA-interfacing fourni</li>
+                        <li data-i18n="future_warning_5">Assurance spatiale complète incluse</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="epoch-booking">
+        <div class="container">
+            <h2 data-i18n="booking_title">Réservez Votre Voyage</h2>
+            <form class="booking-form" onsubmit="submitBooking(event)">
+                <div class="form-group">
+                    <label data-i18n="booking_name">Nom complet</label>
+                    <input type="text" required placeholder="Jean Dupont">
+                </div>
+                <div class="form-group">
+                    <label data-i18n="booking_email">Email</label>
+                    <input type="email" required placeholder="jean@example.com">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-i18n="booking_start">Date de départ</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="booking_travelers">Nombre de voyageurs</label>
+                        <input type="number" min="1" max="20" value="1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="booking_duration">Durée du séjour</label>
+                    <select required>
+                        <option value="">Sélectionnez...</option>
+                        <option value="3">3 jours - 4,500€</option>
+                        <option value="7">7 jours - 6,500€</option>
+                        <option value="14">14 jours - 10,000€</option>
+                        <option value="21">21 jours - 15,000€</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="booking_experience">Type d'expérience</label>
+                    <select required>
+                        <option value="">Sélectionnez...</option>
+                        <option value="adventure">🎯 Aventure</option>
+                        <option value="discovery">🔍 Découverte</option>
+                        <option value="luxury">👑 Luxe</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="booking_interests">Vos intérêts (sélectionnez 1+)</label>
+                    <div class="checkboxes">
+                        <label><input type="checkbox" name="interests" value="cities"> 🌆 Villes volantes</label>
+                        <label><input type="checkbox" name="interests" value="ai"> 🤖 Intelligence artificielle</label>
+                        <label><input type="checkbox" name="interests" value="space"> 🚀 Technologie spatiale</label>
+                        <label><input type="checkbox" name="interests" value="vr"> 🎮 Réalités virtuelles</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large" data-i18n="booking_submit">
+                    Réserver Maintenant
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="epoch-cta">
+        <h2 data-i18n="cta_help">Besoin d'aide pour choisir?</h2>
+        <button class="btn btn-secondary btn-large" onclick="toggleChatbot()">
+            🤖 <span data-i18n="chat_ai">Discuter avec notre IA</span>
+        </button>
+    </section>
+
+    <!-- Floating Chatbot Widget injected by chatbot.js -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 TimeTravel Agency. <span data-i18n="rights">Tous droits réservés</span>.</p>
+            <div class="footer-links">
+                <a href="#privacy" data-i18n="privacy">Confidentialité</a>
+                <a href="#terms" data-i18n="terms">Conditions</a>
+                <a href="#contact" data-i18n="contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="epoch-script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+
+</html>
