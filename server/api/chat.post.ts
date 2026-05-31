@@ -8,7 +8,10 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const body = (await readBody(event)) as ChatBody
 
-  if (!config.mistralApiKey) {
+  const mistralApiKey = config.mistralApiKey || process.env.MISTRAL_API_KEY
+  const mistralModel = config.mistralModel || process.env.MISTRAL_MODEL || 'mistral-large-latest'
+
+  if (!mistralApiKey) {
     throw createError({ statusCode: 500, statusMessage: 'MISTRAL_API_KEY is not configured' })
   }
 
@@ -21,10 +24,10 @@ export default defineEventHandler(async (event) => {
     {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${config.mistralApiKey}`
+        Authorization: `Bearer ${mistralApiKey}`
       },
       body: {
-        model: config.mistralModel,
+        model: mistralModel,
         messages: body.messages,
         max_tokens: typeof body.max_tokens === 'number' ? body.max_tokens : 600,
         temperature: typeof body.temperature === 'number' ? body.temperature : 0.7

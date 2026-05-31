@@ -6,8 +6,8 @@ export default defineNuxtConfig({
   css: ['~/assets/css/theme-lux.css'],
 
   runtimeConfig: {
-    mistralApiKey: process.env.MISTRAL_API_KEY || '',
-    mistralModel: process.env.MISTRAL_MODEL || ''
+    mistralApiKey: '',
+    mistralModel: ''
   },
 
   app: {
