@@ -19,8 +19,9 @@ Webapp pour une agence de voyage temporel fictive, construite avec Nuxt 4 et Vue
 ## 🤖 IA Utilisées
 
 - Chatbot : Mistral Large via API
-- Code & architecture Nuxt
+- Code & architecture Nuxt : codex
 - Visuels : assets du projet pédagogique
+
 
 ## 📁 Structure principale
 
