@@ -56,8 +56,8 @@ npm run preview
 Créez un fichier `.env` à la racine avec les variables :
 
 ```env
-MISTRAL_API_KEY=your_api_key
-MISTRAL_MODEL=mistral-large-latest
+MISTRAL_API_KEY=your_mistral_api_key_here
+MISTRAL_MODEL=your_mistral_model_here
 ```
 
 ## 📄 Licence
