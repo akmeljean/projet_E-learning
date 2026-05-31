@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     mistralApiKey: process.env.MISTRAL_API_KEY || '',
-    mistralModel: process.env.MISTRAL_MODEL || 'mistral-large-latest'
+    mistralModel: process.env.MISTRAL_MODEL || ''
   },
 
   app: {
