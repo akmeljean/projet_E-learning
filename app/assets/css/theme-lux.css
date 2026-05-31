@@ -77,6 +77,13 @@ body::before {
 /* Light theme (toggle) */
 body.theme-light {
   color-scheme: light;
+  --lux-surface: rgba(255, 255, 255, 0.72);
+  --lux-surface-2: rgba(255, 255, 255, 0.9);
+  --lux-border: rgba(17, 24, 39, 0.10);
+  --lux-border-2: rgba(17, 24, 39, 0.16);
+  --lux-text: rgba(17, 24, 39, 0.92);
+  --lux-muted: rgba(55, 65, 81, 0.82);
+  --lux-shadow: 0 16px 45px rgba(15, 23, 42, 0.10);
 }
 
 html.theme-light,
@@ -279,6 +286,11 @@ body.theme-light::before {
   border: 1px solid var(--lux-border) !important;
   border-radius: 999px !important;
   color: var(--lux-text) !important;
+}
+
+.language-select option {
+  background: #0b0d12;
+  color: var(--lux-text);
 }
 
 .hero {
@@ -724,8 +736,27 @@ body.theme-light .navbar {
   border-bottom-color: rgba(0, 0, 0, 0.08);
 }
 
+body.theme-light .nav-menu {
+  background: rgba(255, 252, 247, 0.96) !important;
+  border-color: rgba(17, 24, 39, 0.08);
+}
+
 body.theme-light .nav-menu a {
   color: rgba(18, 18, 18, 0.86) !important;
+}
+
+body.theme-light .icon-btn,
+body.theme-light .language-select,
+body.theme-light .btn-secondary,
+body.theme-light .btn-outline,
+body.theme-light .lux-option,
+body.theme-light .lux-thumb {
+  color: var(--lux-text) !important;
+}
+
+body.theme-light .language-select option {
+  background: #fffdfa;
+  color: rgba(17, 24, 39, 0.92);
 }
 
 body.theme-light .about-container,
@@ -746,6 +777,62 @@ body.theme-light .lux-q {
 body.theme-light .lux-option {
   background: rgba(255, 255, 255, 0.70);
   border-color: rgba(0, 0, 0, 0.10);
+}
+
+body.theme-light .hero-overlay {
+  background: linear-gradient(180deg, rgba(251, 250, 247, 0.18), rgba(251, 250, 247, 0.72)) !important;
+}
+
+body.theme-light .hero-subtitle,
+body.theme-light .section-subtitle,
+body.theme-light .about-intro,
+body.theme-light .epoch-content p,
+body.theme-light .cta-content p,
+body.theme-light .footer-links a {
+  color: var(--lux-muted) !important;
+}
+
+body.theme-light .hero-title,
+body.theme-light .section-title,
+body.theme-light .about-content h2,
+body.theme-light .value-card h3,
+body.theme-light .epoch-content h3,
+body.theme-light .cta-content h2,
+body.theme-light .lux-quiz h2,
+body.theme-light .lux-gallery-header h2,
+body.theme-light .details-main h2,
+body.theme-light .epoch-pois h2,
+body.theme-light .epoch-booking h2,
+body.theme-light .info-card h3,
+body.theme-light .poi-card h3,
+body.theme-light .highlight-item h3,
+body.theme-light .option-label {
+  background: linear-gradient(90deg, var(--lux-gold-2), var(--lux-gold)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+body.theme-light .btn-secondary {
+  background: rgba(255, 255, 255, 0.68) !important;
+}
+
+body.theme-light .btn-outline {
+  background: rgba(255, 255, 255, 0.82) !important;
+}
+
+body.theme-light .lux-gallery-media {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+body.theme-light .cta-content {
+  background: linear-gradient(180deg, rgba(255, 252, 247, 0.94), rgba(244, 237, 223, 0.92)) !important;
+  border-color: rgba(214, 179, 90, 0.24) !important;
+}
+
+body.theme-light .cta-content h2 {
+  text-shadow: 0 8px 24px rgba(214, 179, 90, 0.18);
 }
 
 /* ===== Legacy epoch styles: remove cyan/purple + ensure readable light mode ===== */
